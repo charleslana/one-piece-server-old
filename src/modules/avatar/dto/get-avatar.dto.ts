@@ -5,5 +5,5 @@ export class GetAvatarDto {
   id: number;
 
   @Expose()
-  image: number;
+  image: string;
 }

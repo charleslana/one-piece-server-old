@@ -1,11 +1,10 @@
-import { IsInt, IsNotEmpty, Max, Min } from 'class-validator';
+import { IsInt, IsNotEmpty, MaxLength, Min, MinLength } from 'class-validator';
 
 export class CreateAvatarDto {
   @IsNotEmpty()
-  @IsInt()
-  @Min(1)
-  @Max(9999)
-  image: number;
+  @MinLength(1)
+  @MaxLength(255)
+  image: string;
 
   @IsNotEmpty()
   @IsInt()

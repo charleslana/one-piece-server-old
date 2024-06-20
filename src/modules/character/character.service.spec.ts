@@ -9,8 +9,6 @@ import { UpdateCharacterDto } from './dto/update-character.dto';
 describe('CharacterService', () => {
   let service: CharacterService;
   let repository: CharacterRepository;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  let prisma: PrismaService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -19,7 +17,6 @@ describe('CharacterService', () => {
 
     service = module.get<CharacterService>(CharacterService);
     repository = module.get<CharacterRepository>(CharacterRepository);
-    prisma = module.get<PrismaService>(PrismaService);
   });
 
   it('should be defined', () => {

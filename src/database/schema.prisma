@@ -85,7 +85,7 @@ model Character {
 
 model Avatar {
   id          Int       @id @default(autoincrement())
-  image       Int
+  image       String    @db.VarChar(255)
   character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
   characterId Int       @map("character_id")
 
